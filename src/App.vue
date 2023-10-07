@@ -33,7 +33,7 @@ const restart = () => {
 }
 
 const popupRef = ref<InstanceType<typeof GamePopup> | null>(null)
-
+ya
 watch(wrongLetters, () => {
   if (isLose.value) {
     popupRef.value?.open('lose')
