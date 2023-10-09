@@ -5,7 +5,7 @@ import GameFigure from '@/components/game-figure/GameFigure.vue'
 import GameWord from '@/components/game-word/GameWord.vue'
 import GamePopup from '@/components/game-popup/GamePopup.vue'
 import GameNotification from '@/components/GameNotification.vue'
-import { computed, onMounted, ref, watch } from 'vue'
+import { ref, watch } from "vue"
 import GameWrongLetters from '@/components/game-wrong-letters/GameWrongLetters.vue'
 import { useRandomWord } from '@/composables/useRandomWord'
 import { useLetters } from '@/composables/useLetters'
@@ -33,7 +33,6 @@ const restart = () => {
 }
 
 const popupRef = ref<InstanceType<typeof GamePopup> | null>(null)
-ya
 watch(wrongLetters, () => {
   if (isLose.value) {
     popupRef.value?.open('lose')
